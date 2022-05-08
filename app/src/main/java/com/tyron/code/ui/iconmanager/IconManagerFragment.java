@@ -100,7 +100,7 @@ public class IconManagerFragment extends Fragment {
 		RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
 
 		if (!new File(getPackageDirectory() + "/Icons/").exists()) {
-			showConfirmationDialog(recyclerView);
+			showConfirmationDialog(recyclerView, pDialog);
 		} else {
 
 		ProgressManager.getInstance()

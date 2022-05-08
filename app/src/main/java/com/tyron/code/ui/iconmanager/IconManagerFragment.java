@@ -130,7 +130,7 @@ public class IconManagerFragment extends Fragment {
 		builder.create().show();
 	}
 
-	private void startExtractingIcons(final ProgressDialog progressDialog, RecyclerView recyclerView) {
+	private void startExtractingIcons(ProgressDialog progressDialog, RecyclerView recyclerView) {
 		Decompress.unzipFromAssets(requireContext(), "Icons.zip", getPackageDirectory());
 		progressDialog = new ProgressDialog(requireContext());
 		ProgressManager.getInstance().runLater(() -> {
